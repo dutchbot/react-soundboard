@@ -8,7 +8,7 @@ docker run -p 127.0.0.1:3000:3000 --name <name> -t soundboard
 
 Remote:
 ```
-docker build github.com/dutchbot/soundboard -t soundboard
+docker build https://github.com/dutchbot/react-soundboard.git -t soundboard
 docker run -p 127.0.0.1:3000:3000 --name <name> -t soundboard
 ```
 
