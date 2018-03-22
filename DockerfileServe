@@ -1,0 +1,9 @@
+FROM debian:latest
+LABEL com.soundboard.version="0.1.0"
+RUN mkdir -p /var/app/data
+RUN apt-get update -y && apt-get install -y curl
+RUN curl -sL https://deb.nodesource.com/setup_9.x | bash -
+RUN apt-get install -y nodejs
+RUN npm install http-server -g
+COPY data /var/app/data
+ENTRYPOINT http-server /var/app/data --cors -p 3001
